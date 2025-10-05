@@ -1,40 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Flappy Bird Game</title>
-  <link rel="icon" href="https://cdn1.iconfinder.com/data/icons/roundettes-for-os-x-vol-vi/512/Flappy_Bird-01-512.png" type="image/png">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      text-align: center;
-      font-family: sans-serif;
-      background: #505052;
-    }
-    canvas {
-      display: block;
-      margin: 0 auto;
-      background: #88f3ff;
-      border: 4px solid #000000;
-    }
-    #restartBtn {
-      display: none;
-      margin-top: 20px;
-      padding: 10px 20px;
-      font-size: 18px;
-      cursor: pointer;
-    }
-  </style>
-</head>
-<body>
-  <h1>Flappy Bird</h1>
-
-  
-  <canvas id="game" width="400" height="700"></canvas>
-  <button id="restartBtn">🔁 Restart Game</button>
-
-  <script>
-    const canvas = document.getElementById('game');
+const canvas = document.getElementById('game');
     const ctx = canvas.getContext('2d');
     const restartBtn = document.getElementById('restartBtn');
 
@@ -181,6 +145,3 @@
 
     highScore = parseInt(localStorage.getItem('flappyHighScore')) || 0;
     resetGame();
-  </script>
-</body>
-</html>
